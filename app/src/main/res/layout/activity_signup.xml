@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_alignParentStart="true"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".SignupActivity">
+
+    <LinearLayout
+        android:id="@+id/edit_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+    android:text="@string/username"
+    android:id="@+id/username"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+        android:layout_weight="25"
+    />
+
+
+    <EditText
+        android:id="@+id/text_edit"
+        android:text="@string/text_edit"
+        android:textColorHint="@color/highlighted_text_material_light"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="75"
+        />
+    </LinearLayout>
+<LinearLayout
+    android:id="@+id/password_field"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/edit_field">
+
+    <TextView
+        android:id="@+id/password"
+        android:text="@string/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_field"
+        android:layout_weight="25"/>
+
+    <EditText
+        android:text="@string/enter_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_field"
+        android:layout_alignRight="@+id/edit_field"
+        android:layout_weight="75"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_confirm_field">
+        <TextView
+            android:text="@string/password_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_field"
+            android:layout_weight="25"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/re_enter_password"
+            android:layout_weight="75"
+            />
+    </LinearLayout>
+
+
+    <Button android:text="@string/submit"
+        android:id="@+id/submit"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/password_confirm_field"
+        android:layout_alignRight="@+id/password_confirm_field" />
+
+</RelativeLayout>
